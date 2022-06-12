@@ -1,0 +1,17 @@
+<%- include('../layouts/header' ,  {title: 'Novo checklist'} ) %>
+<%- include('../layouts/menu')%>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title size-4">Nova Lista</h1>
+
+    <%- include('form' , {url: '/checklists?_method=post' , checklist: checklist}) %>
+    <!-- Here i'm including the form. there are some variables that i'm injecting on this form, they are on this object -
+      the method part was removed, now it's part of the url, using the method-override call: _method=post 
+    -->
+
+  </div>
+</section>
+
+
+<%- include('../layouts/footer')%>
